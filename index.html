@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website - Saheli Das</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/b9432683ac.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="IMAGES/S LOGO (2).jpg" class="LOGO">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Web Developer</p>
+        <h1>Hi, I'm <span>Saheli Das</span> <br>From India</h1>
+      </div>
+    </div>
+  </div>
+  <!-- about -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="IMAGES/self_2.png" alt="">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I started my tech journey in 2024. I’m a Information Technology student passionate about software development, problem-solving, and open-source contributions. My primary focus is on C++ for DSA and Web Development, and I enjoy exploring Web3 and various other tech stacks. Currently, I'm actively involved in hackathons, tech communities, and collaborative projects, always looking for opportunities to learn and build impactful solutions.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span><br>Web app Development</li>
+              <li><span>DSA</span></li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2025-Current</span><br>Web app Development Training</li>
+              <li><span>2025-Current</span><br>DSA: leetcode,gfg,neetcode,hackrank.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2024-Current</span><br>JIS COLLEGE OF ENGINEERING</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----------------id="services"------------------->
+  <div id="services">
+  <div class="container">
+    <h1 class="sub-title">MY Services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-web-awesome"></i>
+        <h2>Web Design</h2>
+        <p>Frontend: html, css, javascript.</p>
+        <a href="#">learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--------------portfolio---------->
+<div id="protfolio">
+<div class="container">
+  <h1 class="sub-title">My work</h1>
+  <div class="work-list">
+    <div class="work">
+      <img src="images/image1.jpg">
+      <img src="images/image2.jpg">
+      <img src="images/image3.jpg">
+</div>
+</div>
+<br><div class="bio">
+<h3>As a passionate and creative website designer, I have had the privilege of working on various projects that showcase my skills and expertise. Here are some of my notable works:</h3>
+<a href="#"><i class="fa-solid fa-link"></i></a>
+</div>
+<br><a href="#" class="btn">See more</a>
+<!--------------contact-------------------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title"> Contact Me</h1>
+        <p><i class="fa-regular fa-envelope"></i> sahelidas0506@gmail.com</p>
+        <br><p>Have an inquiry, or want to connect? Feel free to leave a message below, or get in touch via LinkedIn, Twitter, or email.</p>
+        <div class="social-icons">
+         <br> <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa-regular fa-envelope"></i></a>
+          <a href="https://github.com/saheli56"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/saheli-das-5b2490313"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://x.com/Saheli5606"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <a href="IMAGES/CV OF Saheli Das.pdf" download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+      <form name="submit-to-google-sheet">
+        <input type="text" name="Name"placeholder="Your Name" required>
+        <input type="email" name="Email"placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn btn2">Submit</button>
+      </form>
+      <span id="msg"></span>
+    </div>
+    </div>
+  </div>
+  <div class="copyright">
+<p>copyright ©  Saheli. Made with <i class="fa-solid fa-heart"></i> </p>
+  </div>
+</div>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+      for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+      }
+      for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right = "0"
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px"
+    }
+
+  </script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwAXBmi2O_hKAboIqYBZB1W9x0cgs4dEFq-kyL-Xo562SUczCIIvCYsy8tnJTRWPu2gdQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML ="Message sent successfully"
+        setTimeout(function (){
+          msg.innerHTML =""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
